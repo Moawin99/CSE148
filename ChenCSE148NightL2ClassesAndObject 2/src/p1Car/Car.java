@@ -1,13 +1,17 @@
 package p1Car;
 
-public class Car {
+public class Car { // class name is a noun
+	// instance variables, data fields, fields, attributes, properties
+	// meant to store the state of future objects (nouns)
 	private String make;
 	private int year;
 	private double price;
 	private String color;
 	private int speed;
 
-	public Car(String make, int year, double price, String color) {
+	// methods, behavior, instance methods
+	// meant to describe the action or behavior or future objects (verbs)
+	public Car(String make, int year, double price, String color) { // parameters
 		this.make = make;
 		this.year = year;
 		this.price = price;
@@ -29,8 +33,13 @@ public class Car {
 		return speed;
 	}
 
+	// overloaded methods
 	public void setSpeed(int speed) {
-		this.speed = speed;
+		this.price = speed;
+	}
+	
+	public void setSpeed(double s) {
+		this.speed = (int) s; // casting
 	}
 
 	public String getMake() {
