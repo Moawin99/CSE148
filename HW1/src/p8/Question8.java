@@ -9,7 +9,9 @@ public class Question8 {
 	private static String[] items = new String[20]; // how many times you may pick a menu item
 	private static double[] price = new double[20]; // price for each pick
 	private static int[] quants = new int[20]; // quantity of each pick
-
+	private static String serverName;
+	private static String tableNumber;
+	
 	public static void main(String[] args) {
 		showMenu();
 		pickItems();
@@ -69,6 +71,9 @@ public class Question8 {
 	}
 	
 	public static void showMenu() {
+		String[] info = obtainServerAndTable();
+		serverName = info[0];
+		tableNumber = info[1];
 		showHeader();
 		String dottedLine = "-----------------------------------------"
 ;		System.out.printf("%5s\t\t%-20s%-10s\n", "Number", "Item", "Price");
@@ -104,8 +109,20 @@ public class Question8 {
 		System.out.println("\t123 Main Street, Selden, NY 11784");
 		System.out.println("\t\t(631) 123 - 4567");
 		System.out.println();
-		System.out.println("Server: Johnny\t\t\tTable 15");
+		
+		System.out.println("Server: " + serverName + "\t\t\t" + tableNumber);
 		System.out.println();
+	}
+	
+	private static String[] obtainServerAndTable() {
+		
+		Scanner kb = new Scanner(System.in);
+		System.out.println("Enter the server name: ");
+		String name = kb.nextLine();
+		System.out.println("Enter the table number: ");
+		String tableNumber = kb.nextLine();
+		String[] infoNeeded = {name, tableNumber};
+		return infoNeeded;
 	}
 }
 
