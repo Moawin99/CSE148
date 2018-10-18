@@ -1,10 +1,6 @@
 package p1grades;
 
 public class FinalScore extends GradingActivity{
-	private double grammarScore;
-	private double spellingScore;
-	private double lengthScore;
-	private double contentScore;
 
 	private static final double GRAMMAR_WEIGHT = 0.3;
 	private static final double SPELLING_WEIGHT = 0.2;
@@ -13,10 +9,10 @@ public class FinalScore extends GradingActivity{
 
 	public FinalScore(double grammarScore, double spellingScore, double lengthScore, double contentScore) {
 		super();
-		this.grammarScore = grammarScore;
-		this.spellingScore = spellingScore;
-		this.lengthScore = lengthScore;
-		this.contentScore = contentScore;
+		setScore(grammarScore * GRAMMAR_WEIGHT + 
+				spellingScore * SPELLING_WEIGHT +
+				lengthScore * LENGTH_WEIGHT +
+				contentScore * CONTENT_WEIGHT);
 	}
 
 }

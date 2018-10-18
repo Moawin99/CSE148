@@ -1,0 +1,8 @@
+Name GPA
+Alan 4.0
+Bill 3.2
+Cathy 3.8
+Dave 2.6
+Ellen 2.9
+Frankie 1.7
+Gary 3.6
