@@ -4,7 +4,7 @@ public class Student {
 	private String name;
 	private double gpa;
 
-	public Student(String name, double gpa) throws InvalidGPAException {
+	public Student(String name, double gpa) throws InvalidGPAException  {
 		super();
 		this.gpa = gpa;
 		checkGPAValidity(gpa);
