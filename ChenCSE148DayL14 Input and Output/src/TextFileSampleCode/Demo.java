@@ -13,7 +13,7 @@ public class Demo {
 		input.nextLine();
 		while(input.hasNextLine()) {
 			String data = input.nextLine();
-			String[] tokens = data.split(" ");
+			String[] tokens = data.split("[ ,:]"); // regular expression
 			Student s = new Student(tokens[0], Double.parseDouble(tokens[1]));
 			myList.add(s);
 		}

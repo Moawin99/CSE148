@@ -1,6 +1,1 @@
-Alan 3.5
-Bill 2.5
-Cathy 4.0
-David 2.6
-Ellen 3.1
-Frankie 1.5
+1223434
