@@ -11,19 +11,10 @@ import java.util.ArrayList;
 public class Utilities {
 
 	public static void saveStudentArray(Student[] a) {
-		try {
-			FileOutputStream fos = new FileOutputStream("objects.dat");
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject(a);
-			oos.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		saveStudentArray("Objects.dat", a);
 	}
 
-	public static void saveStudentArrayAs(String fileName, Student[] a) {
+	public static void saveStudentArray(String fileName, Student[] a) {
 		try {
 			FileOutputStream fos = new FileOutputStream(fileName);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -37,25 +28,7 @@ public class Utilities {
 	}
 
 	public static Student[] loadStudentArray() {
-		FileInputStream fis = null;
-		try {
-			fis = new FileInputStream("objects.dat");
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		ObjectInputStream ois = null;
-		try {
-			ois = new ObjectInputStream(fis);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		Student[] studentArray = null;
-		try {
-			studentArray = (Student[])ois.readObject();
-		} catch (ClassNotFoundException | IOException e) {
-			e.printStackTrace();
-		}
-		return studentArray;
+		return loadStudentArray("Objects.dat");
 	}
 
 	public static Student[] loadStudentArray(String fileName) {

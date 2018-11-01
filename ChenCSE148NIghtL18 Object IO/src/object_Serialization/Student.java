@@ -23,7 +23,4 @@ public class Student extends Person implements Serializable {
 		return super.toString() + ", GPA=" + gpa;
 	}
 	
-	
-	
-	
 }

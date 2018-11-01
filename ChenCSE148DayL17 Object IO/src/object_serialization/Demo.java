@@ -11,25 +11,23 @@ public class Demo {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException  {
 		Student s1 = new Student("Adam", "Male", "6311234567", 3.5);
+		Student s2 = new Student("Bill", "Male", "1234567890", 3.0);
+		Student s3 = new Student("Cathy", "Female", "6311234567", 3.1);
+		Student s4 = new Student("Dave", "Male", "1234567890", 3.1);
+		PersonBag theBag = new PersonBag(10);
+		theBag.insert(s1);
+		theBag.insert(s2);
+		theBag.insert(s3);
+		theBag.insert(s4);
+		theBag.display();
+		System.out.println(theBag.deleteStudentById("2"));
+		theBag.display();
 		
-		try {
-			FileOutputStream fos = new FileOutputStream("Adam.dat");
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject(s1);
-			oos.close();
-			System.out.println("Object is written.");
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		System.out.println(Major.ENG);
 		
-		// read from a binary file
-		FileInputStream fis = new FileInputStream("Adam.dat");
-		ObjectInputStream ois = new ObjectInputStream(fis);
-		Student s = (Student) ois.readObject();
-		System.out.println(s);
-		ois.close();
+//		Utilities.saveStudent(s1);		
+//		Student s = Utilities.loadStudent();
+//		System.out.println(s);
 	}
 
 }
