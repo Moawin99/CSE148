@@ -6,7 +6,5 @@ public class Student extends Person {
 	private CourseNumberAndGrade[] coursesTaken;
 	private double gpa;
 	
-	public double calculateGPA(CourseNumberAndGrade cnag) {
-	}
 	
 }
