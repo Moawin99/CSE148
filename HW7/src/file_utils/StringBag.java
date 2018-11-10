@@ -9,12 +9,20 @@ import java.util.Scanner;
 public class StringBag {
 	public String[] strs;
 	private int nElems;
-//	private Scanner scanner;
 
 	public StringBag(String fileName) {
 		strs = new String[countLines(fileName)];
 		nElems = 0;
 		loadBag(fileName);
+	}
+	
+	public StringBag(int maxSize) {
+		strs = new String[maxSize];
+		nElems = 0;
+	}
+	
+	public int getNElems() {
+		return nElems;
 	}
 
 	private Scanner openFile(String fileName) {
@@ -28,7 +36,7 @@ public class StringBag {
 		return scanner;
 	}
 
-	private void insert(String name) {
+	public void insert(String name) {
 		strs[nElems++] = name;
 	}
 
