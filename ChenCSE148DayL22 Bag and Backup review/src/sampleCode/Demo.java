@@ -33,7 +33,7 @@ public class Demo extends Application {
 		nameField.setPromptText("name");
 		Button addBtn = new Button("INSERT");
 		Button saveBtn = new Button("SAVE");
-		Button loadBtn = new Button("Load");
+		Button loadBtn = new Button("LOAD");
 
 		// addBtn.setOnAction(new EventHandler<ActionEvent> () {
 		//
@@ -70,6 +70,8 @@ public class Demo extends Application {
 			}
 			try {
 				oos.writeObject(theBag);
+//				oos.writeObject(theBag.getArr());
+//				oos.writeObject(theBag.getnElems());
 			} catch (IOException e1) {
 				e1.printStackTrace();
 			}
@@ -97,7 +99,10 @@ public class Demo extends Application {
 				}
 				try {
 					StudentBag theBag2 = (StudentBag)(ois.readObject());
-					nameField.setText(theBag2.getArr()[0].getName());
+//					for(int i = 0; i < theBag2.getnElems(); i++) {
+//						System.out.println(theBag2.getArr()[i]);
+//					}
+					nameField.setText(theBag2.getArr()[1].getName());
 				} catch (ClassNotFoundException | IOException e1) {
 					e1.printStackTrace();
 				}

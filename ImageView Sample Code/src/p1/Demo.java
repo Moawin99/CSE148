@@ -23,15 +23,15 @@ public class Demo extends Application {
 		StackPane root = new StackPane();
 		Scene scene = new Scene(root, 200, 200);
 
-		File file = new File("peoplephotos/males/24.jpg");
+		File file = new File("peoplephotos/females/27.jpg");
 		URL externalForm = file.toURI().toURL();
 		Image image = new Image(externalForm.toString());
 		ImageView imageView = new ImageView();
 		imageView.setImage(image);
 //		
-		Rectangle2D viewportRect = new Rectangle2D(0, 0, 150, 150);
-        imageView.setViewport(viewportRect);
-        imageView.setRotate(15);
+//		Rectangle2D viewportRect = new Rectangle2D(0, 0, 150, 150);
+//        imageView.setViewport(viewportRect);
+//        imageView.setRotate(0);
 
 		root.getChildren().add(imageView);
 		primaryStage.setScene(scene);
