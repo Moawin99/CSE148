@@ -7,6 +7,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -30,6 +31,7 @@ public class DualListViews extends Application {
 		Scene scene = new Scene(root, 400, 250);
 		
 		GridPane gridPane = new GridPane();
+		gridPane.setGridLinesVisible(false);
 		gridPane.setPadding(new Insets(5));
 		gridPane.setHgap(10);
 		gridPane.setVgap(10);
@@ -83,6 +85,7 @@ public class DualListViews extends Application {
 		});
 		
 		VBox vbox = new VBox(5);
+		vbox.setAlignment(Pos.CENTER);
 		vbox.getChildren().addAll(sendRightButton, sendLeftButton);
 		
 		gridPane.add(vbox, 1, 1);

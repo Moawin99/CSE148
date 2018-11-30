@@ -39,6 +39,7 @@ public class MenuExample extends Application {
 			System.out.println("The New MenuItem was clicked!");
 		});
 		exitMenuItem.setOnAction(e -> {
+			
 			Platform.exit();
 		});
 		

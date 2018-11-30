@@ -26,7 +26,7 @@ public class NYColleges extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Label response = new Label("Select a college or University: ");
+		Label response = new Label("Select a college or university: ");
 		ListView<String> lvColleges;
 		Text title = new Text("NY Colleges and Universities");
 		title.setFill(Paint.valueOf("#2A5058"));
@@ -36,7 +36,7 @@ public class NYColleges extends Application{
 		root.setAlignment(Pos.CENTER);
 		
 		ObservableList<String> colleges = FXCollections.observableArrayList("Stony Brook", "NYU",
-							"Nassau CCC",  "Columbia", "Binghamton", "Buffalo", "St. Joe");
+							"Nassau CC",  "Columbia", "Binghamton", "Buffalo", "SCCC", "St Joe");
 		lvColleges = new ListView<String>(colleges);
 		lvColleges.setPrefSize(300, 150);
 		

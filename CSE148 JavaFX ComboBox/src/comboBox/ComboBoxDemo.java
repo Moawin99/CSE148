@@ -19,7 +19,7 @@ public class ComboBoxDemo extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		ObservableList<String> list = FXCollections.observableArrayList("A", "B", "C", "D");
+		ObservableList<String> list = FXCollections.observableArrayList("A", "B+","B", "C+","C", "D", "F");
 		ComboBox<String> box = new ComboBox<>();
 		box.setItems(list);
 		
