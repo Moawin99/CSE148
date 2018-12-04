@@ -15,14 +15,19 @@ public class Utils {
 	public static void load(College college) throws IOException, ClassNotFoundException {
 		FileInputStream fis = new FileInputStream("binaryData/allBags.dat");
 		ObjectInputStream oos = new ObjectInputStream(fis);
-		PersonBag personBag = college.getPersonBag();
-		personBag = (PersonBag) (oos.readObject());
-		ClassroomBag classroomBag = college.getClassroomBag();
-		classroomBag = (ClassroomBag) (oos.readObject());
-		TextbookBag textbookBag = college.getTextbookBag();
-		textbookBag = (TextbookBag) (oos.readObject());
-		CourseBag courseBag = college.getCourseBag();
-		courseBag = (CourseBag) (oos.readObject());
+		
+		PersonBag personBag = (PersonBag) (oos.readObject());
+		college.setPersonBag(personBag);
+		
+		ClassroomBag classroomBag = (ClassroomBag) (oos.readObject());
+		college.setClassroomBag(classroomBag);
+		
+		TextbookBag textbookBag = (TextbookBag) (oos.readObject());
+		college.setTextbookBag(textbookBag);
+		
+		CourseBag courseBag = (CourseBag) (oos.readObject());
+		college.setCourseBag(courseBag);
+		
 		oos.close();
 	}
 }
