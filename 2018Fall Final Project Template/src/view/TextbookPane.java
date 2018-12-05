@@ -25,7 +25,7 @@ public class TextbookPane {
 
 	private HBox buttonBox;
 
-	private TextbookBag textbookBag;
+//	private TextbookBag textbookBag;
 
 	public TextbookPane() {
 //		this.textbookBag = textbookBag;
@@ -37,8 +37,7 @@ public class TextbookPane {
 		authorField.setPromptText("Author");
 		priceField = new TextField();
 		priceField.setPromptText("Price");
-		
-		
+			
 		insertBtn = new Button("INSERT");
 		insertBtn.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
 		searchBtn = new Button("SEARCH");
@@ -96,9 +95,9 @@ public class TextbookPane {
 		return buttonBox;
 	}
 	
-	public TextbookBag getTextbookBag() {
-		return textbookBag;
-	}
+//	public TextbookBag getTextbookBag() {
+//		return textbookBag;
+//	}
 
 	private void buildPane() {
 		textbookPane.add(titleField, 0, 0);

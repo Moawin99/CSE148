@@ -22,7 +22,7 @@ public class College implements Serializable {
 		this.classroomBag = new ClassroomBag(CLASSROOM_BAG_SIZE);
 		this.textbookBag = new TextbookBag(TEXTBOOK_BAG_SIZE);
 		this.courseBag = new CourseBag(TEXTBOOK_BAG_SIZE);
-		// Utils.load(this);
+//		 Utils.load(this);
 	}
 
 	public PersonBag getPersonBag() {

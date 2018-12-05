@@ -113,6 +113,7 @@ public class MenuBarShop {
 	private void setCallbacks() {
 
 		exitMenuItem.setOnAction(e -> {
+			// Utils.save();
 			Platform.exit();
 		});
 	}
