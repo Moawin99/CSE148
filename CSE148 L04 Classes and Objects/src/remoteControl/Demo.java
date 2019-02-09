@@ -15,6 +15,7 @@ public class Demo {
 		RemoteControl rc3 = new RemoteControl();
 		rc3.setColor("GREEN");
 		rc1 = rc3;
+		rc2 = rc3;
 		System.out.println(rc1.getColor());
 		System.out.println(rc2.getColor());
 		
