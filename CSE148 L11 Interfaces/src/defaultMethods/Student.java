@@ -1,6 +1,6 @@
-package abstract_methods;
+package defaultMethods;
 
-public class Student extends Person implements Chargeable {
+public class Student extends Person {
 	private String name;
 	private double gpa;
 
@@ -33,20 +33,15 @@ public class Student extends Person implements Chargeable {
 
 	@Override
 	public double chargeTuition() {
-		return 4000.00;
-	}
-
-	@Override
-	public double chargeParking() {
-		return 10.00;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
 	public double chargeActivities() {
-		return 50.00;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-	public double chargeFood() {
-		return 200.00;
-	}
+	
 }

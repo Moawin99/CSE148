@@ -1,0 +1,10 @@
+CSE110
+College Seminar for Computer Science
+This course is for students of Computer Science
+1.0
+
+CSE118
+Fundamentals of Programming
+This course is an introductory course for Java programming.
+3.0
+

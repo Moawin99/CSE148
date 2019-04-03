@@ -1,4 +1,4 @@
-package abstract_methods;
+package defaultMethods;
 
 public interface Chargeable {
 	double chargeTuition();
