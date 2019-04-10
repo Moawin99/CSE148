@@ -8,13 +8,21 @@ import java.util.Scanner;
 
 public class FileWriterDemo {
 
-	public static void main(String[] args) throws IOException {
-		FileWriter fw = new FileWriter("students.txt", true);
+	public static void main(String[] args)  {
+		FileWriter fw;
+		try {
+			fw = new FileWriter("students.txt", true);
+			System.out.println("hi");
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			
+		}
 		PrintWriter output = new PrintWriter(fw);
-		String firstName = Utils.emitFirstName();
-		String lastName = Utils.emitLastName();
-		output.print(firstName + "\t");
-		output.print(lastName + "\t");
+//		String firstName = Utils.emitFirstName();
+//		String lastName = Utils.emitLastName();
+//		output.print(firstName + "\t");
+//		output.print(lastName + "\t");
 		output.close();
 
 		// -------------------
